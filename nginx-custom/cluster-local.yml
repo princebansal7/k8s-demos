@@ -1,0 +1,9 @@
+apiVersion: kind.x-k8s.io/v1alpha4
+kind: Cluster
+nodes:
+  - role: control-plane
+    extraPortMappings:
+      - containerPort: 30007 # exposing container's port (which are running as nodes for local cluster)
+        hostPort: 30007 # exposing local machine PORT (same as we do on docker)
+  - role: worker
+  - role: worker
