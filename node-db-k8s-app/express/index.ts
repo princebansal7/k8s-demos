@@ -8,8 +8,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const { DB_URL } = process.env;
-console.log(DB_URL);
 const pool = new pg.Pool({
     connectionString: process.env.DB_URL, // postgres://postgres:<password>@<service-name>.<namespace-in-which-db-service-running>.svc.cluster.local:<service-port>/postgres
 });
