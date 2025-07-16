@@ -1,3 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: backend-devs
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -15,7 +21,7 @@ spec:
     spec:
       containers:
         - name: backend-container
-          image: princebansal7/node-db-backend:v1
+          image: princebansal7/node-db-backend:env-v3
           ports:
             - containerPort: 3000
 ---

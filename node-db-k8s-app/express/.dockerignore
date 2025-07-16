@@ -5,4 +5,3 @@ npm-debug.log
 Dockerfile
 db.sqlite3
 **/*.md
-.env
