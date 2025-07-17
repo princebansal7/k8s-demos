@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: env-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-label
+  template:
+    metadata:
+      labels:
+        app: backend-label
+    spec:
+      containers:
+        - name: be-container
+          image: princebansal7/node-be-env:volume-v3 # this image have dotenv path also for the secret .env
+          ports:
+            - containerPort: 3008
+          volumeMounts:
+            - name: env-file
+              readOnly: true
+              mountPath: "/app/secret/"
+      volumes:
+        - name: env-file
+          secret:
+            secretName: env-secrets-volume
