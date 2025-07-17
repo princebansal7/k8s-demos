@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: be-container
-          image: princebansal7/node-be-env:v1
+          image: princebansal7/node-be-env:secrets-v2
           ports:
             - containerPort: 3008
           ############# env vars from configmap #################
@@ -29,3 +29,14 @@ spec:
                 configMapKeyRef:
                   name: env-configmap # should be same as configmap resource
                   key: port # data key mentioned in configMap
+            ############# env vars from secrets #################
+            - name: USERNAME # final env variable
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets # should be same as secret resource
+                  key: username # data key mentioned in secret
+            - name: PASSWORD # final env variable
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets # should be same as secret resource
+                  key: password # data key mentioned in secret

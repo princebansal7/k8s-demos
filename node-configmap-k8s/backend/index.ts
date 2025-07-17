@@ -5,8 +5,10 @@ dotenv.config();
 
 const app = express();
 
-console.log(process.env.DB_URL);
-console.log(process.env.PORT);
+console.log(process.env.DB_URL); // coming from config map manifest
+console.log(process.env.PORT); // coming from config map manifest
+console.log(process.env.USERNAME); // coming from secret manifest
+console.log(process.env.PASSWORD); // coming from secret manifest
 
 app.get("/", (req: any, res: any) => {
     res.json({
