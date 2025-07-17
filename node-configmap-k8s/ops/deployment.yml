@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: env-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-label
+  template:
+    metadata:
+      labels:
+        app: backend-label
+    spec:
+      containers:
+        - name: be-container
+          image: princebansal7/node-be-env:v1
+          ports:
+            - containerPort: 3008
+          ############# env vars from configmap #################
+          env:
+            - name: DB_URL # final env variable
+              valueFrom:
+                configMapKeyRef:
+                  name: env-configmap # should be same as configmap resource
+                  key: db_url # data key mentioned in configMap
+            - name: PORT # final env variable
+              valueFrom:
+                configMapKeyRef:
+                  name: env-configmap # should be same as configmap resource
+                  key: port # data key mentioned in configMap
