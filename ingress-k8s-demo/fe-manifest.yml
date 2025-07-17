@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend
+      app: frontend # helps deployment to find the pods
   template:
     metadata:
       labels:
-        app: frontend
+        app: frontend # this label should match the service's selector
     spec:
       containers:
         - name: frontend-container
@@ -24,7 +24,7 @@ metadata:
   name: frontend-service
 spec:
   selector:
-    app: frontend
+    app: frontend # this label should match the deployment's label as it helps the service to find the pods
   ports:
     - protocol: TCP
       port: 80 # service's PORT, which redirects to target port (POD's PORT)
