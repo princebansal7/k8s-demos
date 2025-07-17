@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend-service
+  name: backend-service # this service is used by ingress to route traffic to backend pods
 spec:
   selector:
     app: backend. # this label should match the deployment's label as it helps the service to find the pods
