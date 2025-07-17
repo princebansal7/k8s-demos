@@ -1,7 +1,10 @@
 # Kubernetes demo applications
 
-- Demo video - 1 | [Link](https://youtu.be/Q7aZ8Jrl4E4?si=S0_ODgsWFMWjb7ZV)
-- node app deployment on GKE (Google Kubernetes Engine) | [Link](https://github.com/princebansal7/backend-docker-k8s?tab=readme-ov-file#readme)
+###### Apologies for low audio in demo videos
+- Node DB app on k8s demo | [Link](https://youtu.be/Q7aZ8Jrl4E4?si=S0_ODgsWFMWjb7ZV)
+- Ingress k8s demo | [Link](https://youtu.be/vIvbZynxYDA)
+
+- Node app deployment on GKE (Google Kubernetes Engine) (Old) | [Link](https://github.com/princebansal7/backend-docker-k8s?tab=readme-ov-file#readme)
 
 - Useful commands to Build multi platform docker images (on Apple silicon)
   
