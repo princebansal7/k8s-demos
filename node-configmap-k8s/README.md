@@ -15,10 +15,11 @@
     ```bash
     docker run -e PORT=3008 -e DB_URL=<your-db-url> -p 3000:3008 princebansal7/node-be-env:v1
     ```
-5. Use ConfigMap for `k8s` cluster
+5. Use ConfigMap for `k8s` cluster. [Link](https://github.com/princebansal7/k8s-demos/blob/main/node-configmap-k8s/ops/configmap.yml)
 
 ## k8s secret
 
+- k8s `secrets` | [Link](https://github.com/princebansal7/k8s-demos/blob/main/node-configmap-k8s/ops/secrets.yml)
 -  To **encode** string in `base64`
    ```bash
    echo 'your-string' | base64
