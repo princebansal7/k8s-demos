@@ -1,8 +1,0 @@
-node_modules
-npm-debug.log
-.gitignore
-.git
-Dockerfile
-db.sqlite3
-*.env
-.md
