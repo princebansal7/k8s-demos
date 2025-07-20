@@ -1,6 +1,6 @@
 # Kubernetes demo applications
 
-###### Apologies for low audio in demo videos
+###### Apologies for low audio in demo videos (watch in 1.5x)
 - Node DB app on k8s demo | [Link](https://youtu.be/Q7aZ8Jrl4E4?si=S0_ODgsWFMWjb7ZV)
 - Ingress service k8s demo | [Link](https://youtu.be/vIvbZynxYDA)
 - Mimic Ingress service demo | [Link](https://youtu.be/UhT6qguVWz8)
