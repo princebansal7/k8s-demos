@@ -25,7 +25,7 @@
     k get secret
     k get ns
 
-    k exec -it mimic-ingress-6bb5f6f7f6-ddk7x -- sh
+    k exec -it <nginx-pod-name> -- sh
 
     curl http://frontend-cip-service.frontend-devs.svc.cluster.local:80/
 
@@ -34,4 +34,4 @@
     ```
 
 - Issues:
-  - in local cluster everything is working fine, getting expected response but when added `A` record with Load Balancer's external IP, requests were not working. 
+  - in local cluster everything is working fine, getting expected response but when added `A` record with Load Balancer's external IP, requests were not working. **[FIXED] - was sending https request instead http, SSL termination not set**
