@@ -9,11 +9,11 @@
 
 - Useful commands to Build multi platform docker images (on Apple silicon)
   
-  - Building image or both platforms
+  - Building image for both platforms
   ```bash
   docker buildx build --platform linux/arm64,linux/amd64 -t <docker-hub-username>/<repo-name>:<tag> --load .
   ```
-  - Building image or Linux platform (on Apple silicon)
+  - Building image for Linux platform (on Apple silicon)
   ```bash
   docker build --platform=linux/amd64 -t <docker-hub-username>/<repo-name>:<tag> .
   ```
