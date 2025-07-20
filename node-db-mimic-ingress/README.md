@@ -1,6 +1,6 @@
 ## Commands
 
-- Useful commands once you setup the k8s cluster and apply `ops/manifests`
+- Useful commands once you setup the k8s cluster and apply `ops/manifests`. (aliased `kubectl` as `k`)
   
     ```bash
     k apply -f db-manifest.yml
