@@ -27,6 +27,10 @@ try {
     process.exit(1); // Optional: exit if DB is critical
 }
 
+app.get("/", async (req, res) => {
+    res.send("<h1>Welcome to backend</h1><p>visit <b>/backend/users</b></p>");
+});
+
 app.get("/users", async (req, res) => {
     const result = await pool.query("SELECT * FROM users");
     res.json(result.rows);
