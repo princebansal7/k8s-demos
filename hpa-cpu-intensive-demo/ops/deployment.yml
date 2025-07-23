@@ -17,6 +17,11 @@ spec:
           image: princebansal7/cpu-intensive-node-be:v1
           ports:
             - containerPort: 3000
+          resources:
+            requests:
+              cpu: "100m"
+            limits:
+              cpu: "300m"
 ---
 apiVersion: v1
 kind: Service
