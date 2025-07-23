@@ -3,16 +3,16 @@ kind: HorizontalPodAutoscaler
 metadata:
   name: cpu-intensive-hpa
 spec:
-  ScaleTargetRef:
-    apiVersion: v1
+  scaleTargetRef:
+    apiVersion: apps/v1
     kind: Deployment
     name: cpu-intensive-deployment
   minReplicas: 2
   maxReplicas: 4
   metrics:
-    - type: resource
+    - type: Resource
       resource:
-      name: cpu
-      target:
-        type: Utilization
-        averageUtilization: 50
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 50
