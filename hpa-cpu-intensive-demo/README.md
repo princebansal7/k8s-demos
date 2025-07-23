@@ -24,6 +24,8 @@
   
     ![demo](images/image-4.png)
 
+- After applying resource limit to `300m`
+  
     ![demo](images/image-6.png)
 
 - CPU usage getting down
