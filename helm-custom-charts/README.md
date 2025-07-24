@@ -2,8 +2,8 @@
 
 - Initialize Helm Chart
   ```bash
-  mkdir my-postgres-chart
-  cd my-postgres-chart
+  mkdir <dir-name>
+  cd <dir-name>
   helm create .
   ```
 - Remove default templates
