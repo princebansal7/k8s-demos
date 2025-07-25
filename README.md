@@ -4,6 +4,7 @@
 - Node DB app on k8s demo | [Link](https://youtu.be/Q7aZ8Jrl4E4?si=S0_ODgsWFMWjb7ZV)
 - Ingress service k8s demo | [Link](https://youtu.be/vIvbZynxYDA)
 - Mimic Ingress service demo | [Link](https://youtu.be/UhT6qguVWz8)
+- CICD with GitOPS and ArgoCD demo | [Link](https://youtu.be/1rP_r2Nizdc)
 
 - Node app deployment on GKE (Google Kubernetes Engine) (Old) | [Link](https://github.com/princebansal7/backend-docker-k8s?tab=readme-ov-file#readme)
 
