@@ -9,7 +9,7 @@
 - Mimic Ingress service with custom LB and reverse proxy demo | [YT](https://youtu.be/UhT6qguVWz8)
 - Volume mount and Secret | [Link](https://github.com/princebansal7/k8s-demos/blob/main/node-secrets-volume-mount/deployment-volume-mount.yml)
 - HPA (Horizontal Pod Scaler) & Metrics Server | [Link](https://github.com/princebansal7/k8s-demos/tree/main/hpa-cpu-intensive-demo#readme)
-- Helm & Helm Charts | [Link]((https://github.com/princebansal7/k8s-demos/tree/main/helm-custom-charts#readme)
+- Helm & Helm Charts | [Link](https://github.com/princebansal7/k8s-demos/tree/main/helm-custom-charts#readme)
 - CICD with GitOPS and ArgoCD demo | [YT](https://youtu.be/1rP_r2Nizdc) | [Repo](https://github.com/princebansal7/gitops-argocd-k8s?tab=readme-ov-file#readme) | [cicd-file](https://github.com/princebansal7/npx-cicd-project/blob/main/.github/workflows/ci-cd.yaml)
 
 - Node app deployment on GKE (Google Kubernetes Engine) (Old) | [Link](https://github.com/princebansal7/backend-docker-k8s?tab=readme-ov-file#readme)
