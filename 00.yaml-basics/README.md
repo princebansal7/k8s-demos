@@ -44,15 +44,15 @@
      ```
 4. Data Types
    
-    | Type    | Example                                |
-    | ------- | -------------------------------------- |
-    | String  | `name: Prince`                         |
-    | Integer | `age: 26`                              |
-    | Float   | `height: 5.9`                          |
-    | Boolean | `is_active: true`                      |
-    | Null    | `nickname: null` or `nickname:`        |
-    | Array   | `skills: [AWS, GCP, Terraform]`        |
-    | Object  | Nested indentation or `{ key: value }` |
+    | Type    | Example                                          |
+    | ------- | ------------------------------------------------ |
+    | String  | `name: Prince`                                   |
+    | Integer | `age: 26`                                        |
+    | Float   | `height: 5.9`                                    |
+    | Boolean | `is_active: true`                                |
+    | Null    | `nickname: null` or `nickname:` i.e, empty value |
+    | Array   | `skills: [AWS, GCP, Terraform]`                  |
+    | Object  | Nested indentation or `{ key: value }`           |
 
 5. Inline formats example
    ```yaml
