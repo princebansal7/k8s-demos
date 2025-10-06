@@ -1,7 +1,7 @@
 # Kubernetes demo applications
 
 ###### Apologies for low audio in few demo videos (watch in 1.5x)
-- yaml basics | [link]()
+- yaml basics | [link](https://github.com/princebansal7/k8s-demos/tree/main/00.yaml-basics#yaml-basics)
 - Basic k8s resources | [Link](https://github.com/princebansal7/k8s-demos/tree/main/01.noob-manifests)
 - custom nginx image deployment with NodePort service | [Link](https://github.com/princebansal7/k8s-demos/blob/main/02.nginx-custom/manifest.yml)
 - Node DB app on k8s demo (without ConfigMap) | [YT](https://youtu.be/Q7aZ8Jrl4E4?si=S0_ODgsWFMWjb7ZV)
