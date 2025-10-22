@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emptydir-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: emptydir-demo
+  template:
+    metadata:
+      labels:
+        app: emptydir-demo
+    spec:
+      containers:
+        - name: writer-container
+          image: busybox
+          command: ["/bin/sh","-c","echo 'Hello from writer container' > /data/message.txt; sleep 3600"]
+          volumeMounts:
+            - name: shared-data
+              mountPath: /data
+        - name: reader-container
+          image: busybox
+          command: ["/bin/sh","-c","cat /data/message.txt; sleep 3600"]
+          volumeMounts:
+            - name: shared-data
+              mountPath: /data
+      volumes:
+        - name: shared-data
+          emptyDir: {}

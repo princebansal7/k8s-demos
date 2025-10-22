@@ -6,6 +6,7 @@
 - custom nginx image deployment with NodePort service | [Link](https://github.com/princebansal7/k8s-demos/blob/main/02.nginx-custom/manifest.yml)
 - Node DB app on k8s demo (without ConfigMap) | [YT](https://youtu.be/Q7aZ8Jrl4E4?si=S0_ODgsWFMWjb7ZV)
 - Node DB app on k8s (with [ConfigMap](https://github.com/princebansal7/k8s-demos/blob/main/04.node-configmap-secrets-k8s/ops/configmap.yml) & [Secrets](https://github.com/princebansal7/k8s-demos/blob/main/04.node-configmap-secrets-k8s/ops/secrets.yml)) | [Link](https://github.com/princebansal7/k8s-demos/blob/main/04.node-configmap-secrets-k8s/ops/deployment.yml)
+- emptyDir emphemral volume [Link]()
 - Ingress service k8s demo | [YT](https://youtu.be/vIvbZynxYDA)
 - Mimic Ingress service with custom LB and reverse proxy demo | [YT](https://youtu.be/UhT6qguVWz8)
 - Volume mount and Secret | [Link](https://github.com/princebansal7/k8s-demos/blob/main/07.node-secrets-volume-mount/deployment-volume-mount.yml)

@@ -1,3 +1,8 @@
+# Ephemeral Volumes
+
+- It is temporary volume that can be shared amongst various containers of a pod, when pod dies, data is also lost with it.
+- Examples: ConfigMaps, Secrets and emptyDir (read only)
+
 ## Ways to pass environment variables
 
 1. Within commands (imperative)
@@ -29,3 +34,20 @@
    echo 'your-base64-encoded-string' | base64 -d
    ```
 *PS: Some versions of echo add a newline. Use echo -n if you want to avoid that*
+
+## emptyDir volume
+
+- We will start 2 container in a pod they will share same volume at mount path `/data`
+- writer-container will data some data in a file at shared volume
+- reader-contianer will read the data from the shared file
+- to verify | [example]()
+  ```sh
+  k logs <pod-name> -c reader-container
+  # or
+  k exec -it <pod-name> -c reader-container -- sh
+  cd data
+  ls
+  k exec -it <pod-name> -c writer-container -- sh
+  cd data
+  ls
+  ```
