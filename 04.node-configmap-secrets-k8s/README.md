@@ -40,7 +40,7 @@
 - We will start 2 container in a pod they will share same volume at mount path `/data`
 - writer-container will data some data in a file at shared volume
 - reader-contianer will read the data from the shared file
-- to verify | [example]()
+- to verify: | [example](https://github.com/princebansal7/k8s-demos/blob/main/04.node-configmap-secrets-k8s/ops/emptydir-manifest.yml)
   ```sh
   k logs <pod-name> -c reader-container
   # or
