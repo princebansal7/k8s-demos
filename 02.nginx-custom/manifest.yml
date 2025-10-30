@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
+  namespace: nginx-demo
 spec:
   replicas: 2
   selector:
@@ -14,8 +15,8 @@ spec:
     spec:
       containers:
         - name: nginx-container
-          image: princebansal7/nginx-custom:blue-v3
-          # image: princebansal7/nginx-custom:green-v2
+          # image: princebansal7/nginx-custom:blue-v4
+          image: princebansal7/nginx-custom:green-v4
           ports:
             - containerPort: 80
 ---
@@ -23,6 +24,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-service
+  namespace: nginx-demo
 spec:
   selector:
     app: nginx
