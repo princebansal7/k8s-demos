@@ -31,6 +31,6 @@
     kind delete cluster --name local-cluster
     ```
 - Open `localhost:30007` in browser to check. If you refresh multiple times maybe you see traffic goes to one pod only because:
-  - Kubernetes’s built-in service load balancing is connection-based, not request-based.
+  - Here Kubernetes’s built-in service (NodePort and kube-proxy) load balancing is connection-based, not request-based.
   - All requests over the same TCP connection (which a web browser typically reuses for efficiency) will hit the same pod.
 - Either use different browsers to check or `curl -v localhost:30007`
