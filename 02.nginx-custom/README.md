@@ -29,6 +29,13 @@
     k delete svc nginx-deployment
     k delete ns nginx-demo
     kind delete cluster --name local-cluster
+
+    # Delete all Kubernetes objects defined in the YAML files located in the current directory (.)
+    # It only deletes resources defined in those YAMLs, not “everything in the cluster.”
+    # If your YAML files include metadata.namespace: some-namespace, the resources in that namespace are deleted.
+    # If no namespace is specified, it defaults to the current namespace
+    kubectl delete -f . --dry-run=client # To see what it would delete first
+    kubectl delete -f . # to actually delete
     ```
 - Here we created local cluster using kind (k8s inside docker), some key points to remember:
   - Kind runs Kubernetes nodes as Docker containers.
