@@ -30,6 +30,12 @@
     k delete ns nginx-demo
     kind delete cluster --name local-cluster
     ```
+- Here we created local cluster using kind (k8s inside docker), some key points to remember:
+  - Kind runs Kubernetes nodes as Docker containers.
+  - To access cluster services from your host, you must expose ports using *`extraPortMappings`*.
+  - Here in [cluser-local.yml](./cluster-local.yml#L5), we specified port mapping which maps container's (kind node) port with host machine's port.
+  - This works similarly to Docker’s `-p hostPort:containerPort` mapping.
+  - Only the control-plane node typically needs these mappings for access from outside (since it acts as the gateway)
 - Open `localhost:30007` in browser to check. If you refresh multiple times maybe you see traffic goes to one pod only because:
   - Here Kubernetes’s built-in service (NodePort and kube-proxy) load balancing is connection-based, not request-based.
   - All requests over the same TCP connection (which a web browser typically reuses for efficiency) will hit the same pod.

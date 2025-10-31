@@ -3,7 +3,7 @@ kind: Cluster
 nodes:
   - role: control-plane
     extraPortMappings:
-      - containerPort: 30007 # exposing container's port (which are running as nodes for local cluster)
+      - containerPort: 30007 # exposing container's port (which are running as nodes for local cluster => kind node)
         hostPort: 30007 # exposing local machine (Mac) PORT (same as we do in docker while port mapping)
   - role: worker
   - role: worker
