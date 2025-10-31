@@ -15,8 +15,8 @@ spec:
     spec:
       containers:
         - name: nginx-container
-          # image: princebansal7/nginx-custom:blue-v4
-          image: princebansal7/nginx-custom:green-v4
+          image: princebansal7/nginx-custom:blue-v4
+          # image: princebansal7/nginx-custom:green-v4
           ports:
             - containerPort: 80
 ---
