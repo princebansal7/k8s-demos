@@ -31,7 +31,7 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 80 # nginx pod's PORT
+      targetPort: 80 # nginx pod's PORT (should match containerPort in pod spec as actual app is listening on this PORT, if some app listen on say 3000, update it to 3000)
       nodePort: 30007 # node's PORT on which pod is running
   type: NodePort
 
@@ -48,7 +48,7 @@ spec:
 
 # - service.spec.targetPort
 #   - The port on the Pod that the Service forwards traffic to.
-#   - Usually equals the containerPort, but can be different or be a named port.
+#   - Usually equals the containerPort, but can be different or be a named port depending on the app listening to which port.
 #   - If omitted, defaults to service.spec.port.
 
 # - service.spec.nodePort (only for type: NodePort or LoadBalancer)
