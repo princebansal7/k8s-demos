@@ -34,3 +34,33 @@ spec:
       targetPort: 80 # nginx pod's PORT
       nodePort: 30007 # node's PORT on which pod is running
   type: NodePort
+
+# Details about PORTS used:
+# - containerPort (pod spec)
+#   - The port the containerized process listens on (e.g., nginx listens on 80).
+#   - Informational for Kubernetes and readers; it does NOT open host ports by itself.
+#   - Can be numeric or named (useful when targetPort references a name).
+
+# - service.spec.port
+#   - The port the Service exposes inside the cluster (ClusterIP).
+#   - Clients inside the cluster talk to ServiceIP:port.
+#   - This is the “logical” port of the Service.
+
+# - service.spec.targetPort
+#   - The port on the Pod that the Service forwards traffic to.
+#   - Usually equals the containerPort, but can be different or be a named port.
+#   - If omitted, defaults to service.spec.port.
+
+# - service.spec.nodePort (only for type: NodePort or LoadBalancer)
+
+# - A port on each Node’s IP (typically in 30000–32767) that forwards to the Service.
+# - External clients can reach the Service via nodeIP:nodePort.
+# - For LoadBalancer services, the cloud LB forwards to this nodePort.
+
+# - Flow when using NodePort/LoadBalancer:
+#   client -> nodeIP:nodePort -> Service (port) -> targetPort -> containerPort
+
+# Notes:
+# - You don’t have to set containerPort for the Pod to work, but it’s recommended.
+# - targetPort can be a name that matches the container port name.
+# - If you want external access, use NodePort or LoadBalancer (or Ingress) rather than relying on containerPort alone.
