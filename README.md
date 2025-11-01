@@ -26,3 +26,8 @@
     ```bash
     docker build --platform=linux/amd64 -t <docker-hub-username>/<repo-name>:<tag> .
     ```
+- Useful k8s commands
+  ```sh
+  # Lists details about all k8s resources
+  kubectl api-resources
+  ```
