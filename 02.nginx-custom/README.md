@@ -62,7 +62,7 @@
   export TOKEN=<generated-jwt-token>
   echo $TOKEN
   k cluster-info
-  # Service account will not be able to access pods and don't have permission
+  # Service account will not be able to access pods as don't have permission
   curl -k https://127.0.0.1:51871/api/v1/namespaces/default/pods --header "Authorization: Bearer $TOKEN"
 
   # Create role which gives read permission for pods
@@ -70,7 +70,7 @@
   k get role
   k describe role test-pod-reader
 
-  # Create rolebinding associated with subject: service account and above created role
+  # Create rolebinding which binds service account and above created role
   k create rolebinding test-rolebinding --role=test-pod-reader --user=system:serviceaccount:default:test-sa
   k get rolebinding
   # Now service account will be able to list pods
