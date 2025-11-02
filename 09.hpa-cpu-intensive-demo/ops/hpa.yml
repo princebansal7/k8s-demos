@@ -8,11 +8,11 @@ spec:
     kind: Deployment
     name: cpu-intensive-deployment
   minReplicas: 2
-  maxReplicas: 4
+  maxReplicas: 5
   metrics:
     - type: Resource
       resource:
         name: cpu
         target:
           type: Utilization
-          averageUtilization: 50
+          averageUtilization: 20 # it represents that whatever the container requested in 'request.cpu', if 20% of that is utilized then HPA will scale the pods (=> to HPA to work properly, requests.cpu must be set in deployment)

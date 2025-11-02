@@ -19,9 +19,9 @@ spec:
             - containerPort: 3000
           resources:
             requests:
-              cpu: "100m"
+              cpu: "100m" # atleast this much cpu is needed, if node has 100m or more available then only pod will scheduled on the node  (200m means 0.2 CPU, m stands for millicores)
             limits:
-              cpu: "300m"
+              cpu: "200m" # setting limit as running process can use more CPU too running beyond this limit will be throttled (won't use more than 200m)
 ---
 apiVersion: v1
 kind: Service
@@ -35,3 +35,13 @@ spec:
       port: 80
       targetPort: 3000
   type: LoadBalancer
+
+## More details about requests and limits and averageUtilization:
+
+# - averageUtilization is a cluster-wide target across the pods in the target (not a per‑pod hard threshold).
+# - HPA computes: averageUtilization = (sum of current CPU usage across all pods ÷ sum of CPU requests across all pods) * 100.
+# - If that computed average is above your target (20), HPA will scale up; if below it may scale down.
+## Example
+# - Two pods, each requests: 200m CPU → total requested = 400m.
+# - averageUtilization: 20% → target total usage = 0.20 * 400m = 80m.
+# - If the combined CPU usage of both pods > 80m, HPA considers scaling up. It does not require both pods to be at 20% individually.

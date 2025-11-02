@@ -1,9 +1,11 @@
 ## HPA (Horizontal Pod Autoscaler) & Metrics server
 
-- To install metrics server
+- To Automatically adjusts the number of pod replicas in the deployment/replicaSet/statefulSet based on the observed metrics like CPU utilization/Custom metrics
+- To install metrics server - helps in collecting resource usage metrics
   ```sh
   kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
   ```
+- To HPA to work in **deployment** must specify `requests`. find more on [requests](./ops/deployment.yml#L21) and [averageUtilizatio](./ops/hpa.yml#18)
 - HPA & metrics related commands
   ```sh
   k get hpa -w
