@@ -5,7 +5,7 @@
   ```sh
   kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
   ```
-- To HPA to work in **deployment** must specify `requests`. find more on [requests](./ops/deployment.yml#L21) and [averageUtilizatio](./ops/hpa.yml#18)
+- To HPA to work in **deployment** must specify `requests`. find more on [requests](./ops/deployment.yml#L21) and [averageUtilization](./ops/hpa.yml#L18)
 - HPA & metrics related commands
   ```sh
   k get hpa -w
