@@ -86,4 +86,4 @@
   k delete sa test-sa
   k get nodes
   ```
-- Check RBAC demo [Link]()
+- Check RBAC demo [Link](https://github.com/princebansal7/k8s-demos/tree/main/02.nginx-custom/rbac#rbac-demo)
