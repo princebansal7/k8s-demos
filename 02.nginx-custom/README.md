@@ -1,6 +1,6 @@
 # Custom nginx
 
-- Created custom `ngnix` image for testing blue/green web-page along with hostname (here pod-name) | [custom-image](https://hub.docker.com/r/princebansal7/nginx-custom/tags)
+- Created custom `ngnix` image for testing blue/green web-page along with hostname (here pod-name) | [custom-image](https://hub.docker.com/r/princebansal7/nginx-custom/tags) | [doc-link](https://docs.google.com/document/d/18B6NHKwFbKpQkP-P1xumXU4s6LTRRsHDAiN836ihhco/edit?tab=t.0)
 
 - useful commands
   ```sh
