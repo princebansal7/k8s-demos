@@ -87,3 +87,4 @@
   k get nodes
   ```
 - Check RBAC demo [Link](https://github.com/princebansal7/k8s-demos/tree/main/02.nginx-custom/rbac#rbac-demo)
+- HPA demo [Link](https://github.com/princebansal7/k8s-demos/tree/main/09.hpa-cpu-intensive-demo#hpa-horizontal-pod-autoscaler--metrics-server)
