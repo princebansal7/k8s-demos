@@ -4,7 +4,7 @@
 - YAML basics | [link](https://github.com/princebansal7/k8s-demos/tree/main/00.yaml-basics#yaml-basics)
 - Basic k8s resources and yaml template commands | [Link](https://github.com/princebansal7/k8s-demos/tree/main/01.noob-manifests)
 - Custom nginx image deployment with NodePort service | [Link](https://github.com/princebansal7/k8s-demos/tree/main/02.nginx-custom#custom-nginx)
-- Learn RBAC | [Link](https://github.com/princebansal7/k8s-demos/tree/main/02.nginx-custom/rbac#rbac-demo)
+- Learn RBAC | [Link](https://github.com/princebansal7/k8s-demos/blob/main/02.nginx-custom/README.md#authentication-authorization-and-rbac)
 - Node DB app on k8s demo (without ConfigMap) | [YT](https://youtu.be/Q7aZ8Jrl4E4?si=S0_ODgsWFMWjb7ZV)
 - Node DB app on k8s (with [ConfigMap](https://github.com/princebansal7/k8s-demos/blob/main/04.node-configmap-secrets-k8s/ops/configmap.yml) & [Secrets](https://github.com/princebansal7/k8s-demos/blob/main/04.node-configmap-secrets-k8s/ops/secrets.yml)) | [Link](https://github.com/princebansal7/k8s-demos/blob/main/04.node-configmap-secrets-k8s/ops/deployment.yml)
 - `emptyDir` emphemeral volume | [Link](https://github.com/princebansal7/k8s-demos/tree/main/04.node-configmap-secrets-k8s#readme)
