@@ -1,26 +1,26 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-pod
+  name: nginx-blue
   labels:
     app: webserver
 spec:
   containers:
-    - name: nginx-container
-      image: nginx
+    - name: nginx-bluecontainer
+      image: princebansal7/nginx-custom:blue-v4
       ports:
         - containerPort: 80
 ---
 kind: Pod
 apiVersion: v1
 metadata:
-  name: httpd-pod
+  name: nginx-green
   labels:
     app: webserver
 spec:
   containers:
-    - name: httpd-container
-      image: httpd
+    - name: nginx-green-container
+      image: princebansal7/nginx-custom:green-v2
       ports:
         - containerPort: 80
 
