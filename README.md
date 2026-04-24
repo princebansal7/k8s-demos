@@ -28,7 +28,18 @@
     docker build --platform=linux/amd64 -t <docker-hub-username>/<repo-name>:<tag> .
     ```
 - Useful k8s commands
-  ```sh
-  # Lists details about all k8s resources
-  kubectl api-resources
-  ```
+
+  - Lists details about all k8s resources
+    ```sh
+    kubectl api-resources
+    ```
+  - Exaplain command for checking k8s object resource field details
+    ```sh
+    kubectl explain <k8s-object>
+
+    kubectl explain pods
+    kubectl explain pods.spec # to go deeper about certain field
+    kubectl explain pods --recursive # outputs entire comprehensive list of fields
+
+    kubectl explain deployment
+    ```
