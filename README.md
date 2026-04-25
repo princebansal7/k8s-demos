@@ -28,7 +28,7 @@
     docker build --platform=linux/amd64 -t <docker-hub-username>/<repo-name>:<tag> .
     ```
 - Useful k8s commands
-  - Setup shorthand and auto completions
+  - Setup shorthand and auto completions [Doc](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
     ```sh
     source <(kubectl completion zsh)  # set up autocomplete in zsh into the current shell
     echo '[[ $commands[kubectl] ]] && source <(kubectl completion zsh)' >> ~/.zshrc # add autocomplete permanently to your zsh shell
