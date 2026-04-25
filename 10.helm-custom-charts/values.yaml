@@ -1,11 +1,9 @@
 name: postgres-helm
 label: postgres-app
 replicaCount: 1
-namespace: postgres-ns
 postgresUser: prince
 postgresPassword: pass123
 postgresDatabase: my-db
-namespace: postgres
 image:
   repository: postgres
   tag: latest
